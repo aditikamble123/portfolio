@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aditi Kamble — Portfolio
 
-## Getting Started
+> A cinematic, scrollytelling portfolio built for a Data Analyst & ML Engineer.
 
-First, run the development server:
+Live at → **[aditikamble.netlify.app](https://aditikamble.netlify.app)** *(update with your real URL once deployed)*
+
+---
+
+## ✨ Features
+
+- **Scrollytelling Hero** — Canvas-based frame-scrubbing animation tied to scroll progress
+- **About** — Bio, skills grid, and education at a glance
+- **Experience** — Internship at Fireblaze Technologies with a clean meta/bullets layout
+- **Projects** — Numbered list of 6 projects spanning Data Analytics, ML, AI and Frontend
+- **Certificates** — 6 professional certifications (NASSCOM, Deloitte, Accenture, Microsoft, Google, Tata)
+- **Contact & Footer** — Direct email, GitHub, LinkedIn and resume download
+- Smooth **Framer Motion** animations throughout
+- Fully **responsive** — mobile, tablet and desktop
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | [Next.js 15](https://nextjs.org) (App Router) |
+| Language | TypeScript |
+| Animations | [Framer Motion](https://www.framer.com/motion/) |
+| Canvas | HTML5 Canvas API (frame scrubbing) |
+| Styling | Tailwind CSS |
+| Deployment | [Netlify](https://netlify.com) |
+
+---
+
+## 🚀 Run Locally
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/aditikamble123/portfolio.git
+cd portfolio
+
+# 2. Install dependencies
+npm install
+
+# 3. Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+portfolio/
+├── app/
+│   ├── page.tsx          # Main page — assembles all sections
+│   ├── layout.tsx        # Root layout & metadata
+│   └── globals.css       # Global styles
+├── components/
+│   ├── Navbar.tsx        # Fixed top navigation
+│   ├── ScrollyCanvas.tsx # Canvas frame-scrubbing engine
+│   ├── Overlay.tsx       # Scrollytelling text overlays
+│   ├── About.tsx         # Bio, skills grid, education
+│   ├── Experience.tsx    # Work history
+│   ├── Projects.tsx      # Project list
+│   ├── Certificates.tsx  # Credentials
+│   └── Footer.tsx        # Contact & links
+├── public/
+│   ├── sequence/         # PNG frames for scroll animation
+│   └── resume.pdf        # Downloadable resume
+└── netlify.toml          # Netlify build config
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy on Netlify
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The repo includes a `netlify.toml` — just connect the GitHub repo on [app.netlify.com](https://app.netlify.com) and it deploys automatically.
 
-## Deploy on Vercel
+```toml
+[build]
+  command = "npm run build"
+  publish = ".next"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📬 Contact
+
+**Aditi Kamble** — Data Analyst · ML Engineer · AI Engineer  
+📧 [kamble04aditi@gmail.com](mailto:kamble04aditi@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/aditi-kamble-0a1646266/) · [GitHub](https://github.com/aditikamble123)  
+📍 Nagpur, India
